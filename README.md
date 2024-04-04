@@ -15,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+Import:
+- [sqflite: ^2.3.2](https://pub.dev/packages/sqflite)
+- [path: ^1.9.0](https://pub.dev/packages/path)

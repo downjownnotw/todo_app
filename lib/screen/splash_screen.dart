@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/database/todo_database.dart';
 import 'package:todo_app/screen/route.dart';
 
 class SplashScreen extends StatefulWidget{
@@ -21,6 +22,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void animate(){
     Future.delayed(const Duration(seconds: 2)).then((value){
+      // initialized database
+      TodoDatabase database = TodoDatabase();
+      database.initialized();
+
+      // setup animation
       setState(() {
         opacityEnd = 0;
         sizeEnd = 400;
