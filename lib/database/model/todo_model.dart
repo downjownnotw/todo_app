@@ -5,6 +5,22 @@ class TodoModel{
   String? createdAt;
   String name;
 
+  Map<String, dynamic> toJson(){
+    Map<String, dynamic> json = {};
+    if (id != null) json[colId] = id;
+    if (createdAt != null) json[colCreatedAt] = createdAt;
+    json[colName] = name;
+    return json;
+  }
+
+  factory TodoModel.fromJson(Map<String, dynamic> json){
+    return TodoModel(
+      json[colName],
+      id: json[colId],
+      createdAt: json[colCreatedAt]
+    );
+  }
+
   static const String tableName = 'todo';
   static const String colId = 'id';
   static const String colCreatedAt = 'createdAt';

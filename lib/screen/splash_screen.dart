@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         duration = 200;
       });
       Future.delayed(Duration(milliseconds: duration)).then((value){
-        Navigator.pushReplacementNamed(context, AppRoute.taskScreen);
+        Navigator.pushReplacementNamed(context, AppRoute.todoScreen);
       });
     });
   }

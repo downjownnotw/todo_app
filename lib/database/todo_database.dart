@@ -12,6 +12,7 @@ class TodoDatabase{
   }
 
   late Database _database;
+
   Database get database => _database;
 
   String dbName = "TodoList";
@@ -23,10 +24,8 @@ class TodoDatabase{
     var databasesPath = await getDatabasesPath();
     String path = join(databasesPath, '$dbName.db');
 
-/*
     // Delete the database
-    await deleteDatabase(path);
-*/
+    // await deleteDatabase(path);
 
     // open the database
     _database = await openDatabase(
